@@ -1,0 +1,126 @@
+body {
+  background-color: #282c34; /* Dark background for the whole page */
+  color: white; /* Light text color for better contrast */
+}
+
+body {
+  background-color: #282c34; /* Dark background for the whole page */
+  color: white; /* Light text color for better contrast */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  /* Ensure card background is also dark or transparent for dark mode */
+  background-color: #3a3f47; /* Slightly lighter dark for cards */
+  color: white; /* Ensure card text is white */
+}
+
+/* Adjust text color for specific elements if needed */
+.card-header h2 {
+  color: white;
+}
+
+.form-label {
+  color: white;
+}
+
+.form-control-plaintext {
+  color: white;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Custom extra large font size */
+.fs-extra-large {
+  font-size: 3.5rem; /* Very large font size */
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  /* Ensure card background is also dark or transparent for dark mode */
+  background-color: #3a3f47; /* Slightly lighter dark for cards */
+  color: white; /* Ensure card text is white */
+}
+
+/* Adjust text color for specific elements if needed */
+.card-header h2 {
+  color: white;
+}
+
+.form-label {
+  color: white;
+}
+
+.form-control-plaintext {
+  color: white;
+}
+
+.read-the-docs {
+  color: #888;
+}
