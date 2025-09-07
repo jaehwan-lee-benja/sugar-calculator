@@ -6,7 +6,8 @@ function App() {
   const [milkQuantity, setMilkQuantity] = useState('');
 
   // Calculate sugar needed for yogurt
-  const sugarForYogurt = milkQuantity ? parseFloat(milkQuantity) * 4 : 0;
+  const intermediate1 = milkQuantity ? parseFloat(milkQuantity) * 4.1 : 0;
+  const sugarForYogurt = milkQuantity ? intermediate1 * 7.7 : 0;
 
   // Function to handle page refresh
   const handleRefresh = () => {
@@ -23,16 +24,41 @@ function App() {
               <label htmlFor="milkQuantity" className="form-label fs-3">우유 양 (L)</label> {/* Changed from ml to L */}
               <input
                 type="number"
-                className="form-control form-control-lg"
+                className="form-control form-control-lg text-center"
                 id="milkQuantity"
                 value={milkQuantity}
                 onChange={(e) => setMilkQuantity(e.target.value)}
                 placeholder="예: 440"
+                style={{fontSize: '3rem'}}
               />
             </div>
             <div className="col-12">
-              <label className="form-label fs-3">필요한 설탕 (g)</label>
-              <p className="form-control-plaintext fw-bold fs-extra-large">{sugarForYogurt.toFixed(2)}g</p>
+              <label className="form-label fs-3">필요한 설탕 (kg)</label>
+              <p className="form-control-plaintext fw-bold fs-extra-large">{Math.floor(sugarForYogurt / 1000)}kg</p>
+              <table style={{color: '#888', width: '60%', margin: '0 auto'}}>
+                  <tbody>
+                    <tr>
+                      <td style={{width: '1%', whiteSpace: 'nowrap'}}>1차 계산</td>
+                      <td style={{width: '1%', padding: '0 0.5rem'}}>:</td>
+                      <td style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
+                        <span>{milkQuantity}L * </span>
+                        <span style={{marginLeft: '0.5rem'}}>4.1</span>
+                      </td>
+                      <td style={{width: '1%', padding: '0 1rem'}}>=</td>
+                      <td style={{textAlign: 'right'}}>{intermediate1.toFixed(2)}</td>
+                    </tr>
+                    <tr>
+                      <td style={{width: '1%', whiteSpace: 'nowrap'}}>2차 계산</td>
+                      <td style={{width: '1%', padding: '0 0.5rem'}}>:</td>
+                      <td style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
+                        <span>{intermediate1.toFixed(2)} * </span>
+                        <span style={{marginLeft: '0.5rem'}}>7.7</span>
+                      </td>
+                      <td style={{width: '1%', padding: '0 1rem'}}>=</td>
+                      <td style={{textAlign: 'right'}}>{sugarForYogurt.toFixed(2)}</td>
+                    </tr>
+                  </tbody>
+                </table>
             </div>
           </div>
         </div>
