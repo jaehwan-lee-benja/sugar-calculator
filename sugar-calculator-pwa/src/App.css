@@ -69,7 +69,19 @@ body {
 
 /* Custom extra large font size */
 .fs-extra-large {
-  font-size: 4.5rem; /* Very large font size */
+  font-size: clamp(2.5rem, 10vw, 4.5rem); /* Responsive font size for result */
+}
+
+/* Responsive font size for input field */
+.input-responsive-font {
+  font-size: clamp(1.5rem, 7vw, 3rem);
+}
+
+/* Responsive table width */
+@media (max-width: 576px) { /* For small screens (Bootstrap's sm breakpoint) */
+  table {
+    width: 100% !important; /* Override inline style */
+  }
 }
 
 

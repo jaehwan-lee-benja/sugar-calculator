@@ -11,18 +11,18 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'Sugar Calculator',
-        short_name: 'SugarCalc',
+        name: '설탕양 계산기',
+        short_name: '설탕양 계산기',
         description: 'A simple app to calculate sugar intake.',
         theme_color: '#ffffff',
         icons: [
           {
-            src: 'icon-192x192.svg',
+            src: 'h-icon.svg',
             sizes: '192x192',
             type: 'image/svg+xml'
           },
           {
-            src: 'icon-512x512.svg',
+            src: 'h-icon.svg',
             sizes: '512x512',
             type: 'image/svg+xml'
           }

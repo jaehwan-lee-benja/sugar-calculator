@@ -24,17 +24,16 @@ function App() {
               <label htmlFor="milkQuantity" className="form-label fs-3">우유 양 (L)</label> {/* Changed from ml to L */}
               <input
                 type="number"
-                className="form-control form-control-lg text-center"
+                className="form-control form-control-lg text-center input-responsive-font"
                 id="milkQuantity"
                 value={milkQuantity}
                 onChange={(e) => setMilkQuantity(e.target.value)}
-                placeholder="예: 440"
-                style={{fontSize: '3rem'}}
+                placeholder="숫자 예: 440"
               />
             </div>
             <div className="col-12">
               <label className="form-label fs-3">필요한 설탕 (kg)</label>
-              <p className="form-control-plaintext fw-bold fs-extra-large">{Math.floor(sugarForYogurt / 1000)}kg</p>
+              <p className="form-control-plaintext fw-bold fs-extra-large">{(Math.floor((sugarForYogurt / 1000) * 100) / 100).toFixed(2)}kg</p>
               <table style={{color: '#888', width: '60%', margin: '0 auto'}}>
                   <tbody>
                     <tr>
